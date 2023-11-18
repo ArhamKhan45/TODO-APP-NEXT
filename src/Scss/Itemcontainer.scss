@@ -53,7 +53,7 @@
   div:nth-child(2) {
     @include custom-flex(row, space-between, center);
     margin-left: 50px;
-    border: 1px solid rgb(0, 255, 200);
+
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 992px) {
