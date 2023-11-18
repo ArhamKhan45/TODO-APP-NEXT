@@ -4,7 +4,7 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 const Fetchtodo = async (token) => {
   try {
-    const response = await fetch(`${process.env.URL}/api/auth/user/mytasks`, {
+    const response = await fetch(`${process.env.MYURL}/api/auth/user/mytasks`, {
       cache: "no-cache",
       headers: {
         cookie: `token=${token}`,
