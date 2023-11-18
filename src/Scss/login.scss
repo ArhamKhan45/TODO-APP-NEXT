@@ -1,0 +1,61 @@
+@use "_mycolor.scss" as mycolor;
+
+.custom-login {
+  width: 100%;
+  height: 500px;
+
+  form {
+    padding: 30px;
+    width: 59%;
+    margin: 0 auto;
+    text-align: center;
+
+    input {
+      width: 100%;
+      padding: 10px;
+      display: block;
+      margin-bottom: 25px;
+      &::placeholder {
+        color: black;
+      }
+    }
+    input[type="submit"] {
+      width: 250px;
+      display: inline;
+      color: mycolor.$button-text-color;
+      background-color: mycolor.$button-bg-color;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        background-color: mycolor.$hover-button-bg-color;
+        color: mycolor.$hover-button-text-color;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+
+    &:hover {
+      color: rgb(110, 103, 103);
+    }
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+  .custom-login {
+    // border: 2px solid red;
+    width: 100%;
+
+    form {
+      input {
+        width: 100%;
+      }
+      input[type="submit"] {
+        width: 100%;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+}

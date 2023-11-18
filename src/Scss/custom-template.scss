@@ -1,0 +1,11 @@
+@mixin custom-flex($flex-direction, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin custom-hover($text-color, $bg-color) {
+  color: $text-color;
+  background-color: $bg-color;
+}

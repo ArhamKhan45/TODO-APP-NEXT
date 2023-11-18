@@ -1,0 +1,56 @@
+@use "_mycolor.scss" as mycolor;
+
+@mixin custom-nav-hover($text-color, $bg-color) {
+  color: $text-color;
+  background-color: $bg-color;
+}
+
+.custom-navbar {
+  background-color: mycolor.$nav-bg-color;
+  &.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .navbar-brand {
+    color: mycolor.$nav-text-color;
+    padding: 10px 8px;
+    font-size: 24px;
+    margin-left: 35px;
+    font-weight: 800;
+    &:hover {
+      @include custom-nav-hover(
+        mycolor.$hover-nav-text-color,
+        mycolor.$hover-nav-bg-color
+      );
+    }
+  }
+
+  .nav-item {
+    padding: 5.7px 35px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    &:hover {
+      @include custom-nav-hover(
+        mycolor.$hover-nav-text-color,
+        mycolor.$hover-nav-bg-color
+      );
+      .nav-link {
+        color: mycolor.$hover-nav-text-color;
+      }
+    }
+    .nav-link {
+      color: mycolor.$nav-text-color;
+    }
+  }
+
+  button {
+    &.navbar-toggler {
+      border-color: mycolor.$navbar-toggler-btn-border;
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(250, 29, 29)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+      }
+    }
+  }
+}
